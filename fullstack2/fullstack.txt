@@ -1,0 +1,82 @@
+Projet 
+
+- livraison attendue => le 28/04/2023 - 17h00 (bien)
+- mode de livraison : via un dépôt github.com
+- nombre de participant : groupe seul / un groupe de 2 etudiants / 3 max
+- l'objet du projet est de pratiquer l'ensemble des concepts vus durant les 2 mois précédents (javascript front et back)
+- il n'y a pas de note sur 20 => objectif est de pratiquer 
+-
+
+-----------------------------
+
+Sujet 
+
+vous allez créer une application de présentation de musée.
+Cette application sera découpée en 2 parties :
+
+- une partie front => (react native) 
+- une partie back  => (Node JS / express / mongoDB)
+
+
+---------
+
+partie back :
+vous devez mettre en place une API qui permet de gérer des oeuvres présentées dans le musée 
+il sera possible via l'API de voir l'ensemble des oeuvres / voir une seule oeuvre / ajouter / modifier et supprimer une oeuvre 
+
+en plus de la gestion des oeuvres, l'API permettra de gérer des profils utilisateurs (gestionnaires de l'application)
+là aussi il faudra pouvoir réaliser un CRUD sur les profils utilisateurs 
+
+enfin, il est demander de réaliser un système d'authentification et d'autorisation via JsonWebToken 
+
+
+Base de données => MongoDB 
+
+une oeuvre a le schéma de Document suivant :
+
+{
+_id :
+nom : texte maximum de 255
+description : text maximum de 10000
+image : url
+auteur : texte maximum de 255
+dt_creation : date 
+}
+
+=> vous pouvez prendre ce que vous voulez comme concept derrière le mot oeuvre : peintures / jouets / vases / fleurs / livres / NFT 
+
+un profil utilisateur a le schema suivant :
+
+{
+_id :
+email : texte maximum de 255
+password : texte maximum de 255
+role : (admin/ redacteur)
+}
+
+--------- 
+
+Front :
+ 
+- Accueil l'application disposera une écran d'accueil qui liste l'ensemble des oeuvres disposibles dans le musée
+- Single : si vous cliquez sur une image dans l'accueil, un fenêtre s'ouvre présentant l'oeuvre en question 
+- Connexion : dans lequel vous avez un formulaire avec deux champs email / password 
+- si vous vous saisissez correctement les bon identifiants vous accédez à un espace de gestion dans lequel vous pourrez créer / modifier / supprimer une oeuvre existante
+- deplus dans l'espace de gestion vous pouvez aussi créer / modifier / supprimer un profil gestionnaire 
+
+ 
+Bonus :
+
+pour ceux qui auront tout fini => vous pouvez mettre en place un système de commentaire pour chaque oeuvre 
+
+
+
+=> Conseil : front / back ??? 
+back => ?? je suis a l'aise en back avec Thunder client (simulateur de front)
+
+ajax 
+
+react native => fetch("http://localhost:4003", {method: "POST})
+Nodejs Express route.post("/" , function(request, reponse){}) 
+
+
